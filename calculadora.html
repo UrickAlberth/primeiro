@@ -1,0 +1,144 @@
+<html>
+  <head>
+  </head>
+<style>
+</style>    
+<body bgcolor="black">
+  <section class="container">
+    <h1>Calculadora</h1>
+    <input id="textinput" name="textinput" value="" type="text">
+<p></p>
+    <button id="btlimpar" onclick="limpar()">Limpar</button>
+<p></p>
+    <button id="btn1" onclick="bt1()">1</button>
+    <button id="btn2" onclick="bt2()">2</button>
+    <button id="btn3" onclick="bt3()">3</button>
+    <button id="btomais" onclick="btsoma()">+</button>
+    <button id="btn4" onclick="bt4()">4</button>
+    <button id="btn5" onclick="bt5()">5</button>
+    <button id="btn6" onclick="bt6()">6</button>
+    <button id="btomenos" onclick="btsub()">-</button>
+    <button id="btn7" onclick="bt7()">7</button>
+    <button id="btn8" onclick="bt8()">8</button>
+    <button id="btn9" onclick="bt9()">9</button>
+    <button id="btovezes" onclick="btmul()">*</button>
+    <button id="btopcem" onclick="btpcento()">%</button>
+    <button id="btn0" onclick="bt0()">0</button>
+    <button id="btpont" onclick="btponto()">.</button>
+    <button id="btodivi" onclick="btdivi()">/</button>
+    <button id="btigual" onclick="igual()">=</button>
+    <script>
+for(var i = 1; i <= 9; i++){
+let btn = document.createElement('button');
+    btn.textContent = i;
+    document.body.appendChild(btn);
+    
+    btn.addEventListener('click',() =>{
+        if(document.getElementById("textinput").value === ''){
+            textinput.value=btn.textContent;
+        }
+        else{
+            textinput.value=document.getElementById("textinput").value+btn.textContent;
+        }
+    });
+if(i===3){
+let btmais = document.createElement('button');
+    btmais.textContent = '+';
+    document.body.appendChild(btmais);
+    
+    btmais.addEventListener('click',() =>{
+       valor1 = parseFloat(document.getElementById("textinput").value);
+  operador="+";
+  textinput.value="";
+  vi =0;
+    });
+var p =document.createElement('p');
+document.body.appendChild(p);
+}
+if(i===6){
+let btmenos = document.createElement('button');
+    btmenos.textContent = '-';
+    document.body.appendChild(btmenos);
+    
+    btmenos.addEventListener('click',() =>{
+       valor1 = parseFloat(document.getElementById("textinput").value);
+  operador="-";
+  textinput.value="";
+  vi =0;
+    });  
+var p =document.createElement('p');
+document.body.appendChild(p);
+}
+if(i===9){
+let btvezes = document.createElement('button');
+    btvezes.textContent = '*';
+    document.body.appendChild(btvezes);
+    
+    btvezes.addEventListener('click',() =>{
+       valor1 = parseFloat(document.getElementById("textinput").value);
+  operador="*";
+  textinput.value="";
+  vi =0;
+    });  
+var p =document.createElement('p');
+document.body.appendChild(p);
+}
+}
+
+let btpcem = document.createElement('button');
+    btpcem.textContent = '%';
+    document.body.appendChild(btpcem);
+    
+    btpcem.addEventListener('click',() =>{
+       valor1 = parseFloat(document.getElementById("textinput").value);
+  operador="%";
+  textinput.value="";
+  vi =0;
+    });  
+
+let btnu0 = document.createElement('button');
+    btnu0.textContent = "0";
+    document.body.appendChild(btnu0);
+    
+    btnu0.addEventListener('click',() =>{
+        if(document.getElementById("textinput").value === ''){
+            textinput.value=btnu0.textContent;
+        }
+        else{
+            textinput.value=document.getElementById("textinput").value+btnu0.textContent;
+        }
+    });
+
+        let btv = document.createElement('button');
+    btv.textContent = '.';
+    document.body.appendChild(btv);
+    
+    btv.addEventListener('click',() =>{
+
+        if(document.getElementById("textinput").value === ''){
+            
+        }
+  if(vi===1){
+}
+        else{
+            textinput.value=document.getElementById("textinput").value+".";
+  vi=1;
+        }
+    });
+
+        let btdiv = document.createElement('button');
+    btdiv.textContent = '/';
+    document.body.appendChild(btdiv);
+    
+    btdiv.addEventListener('click',() =>{
+       valor1 = parseFloat(document.getElementById("textinput").value);
+  operador="/";
+  textinput.value="";
+  vi =0;
+    });  
+
+
+</script>
+  </section>
+</body>
+</html>
